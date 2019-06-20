@@ -1581,3 +1581,16 @@ Cannot render console from 207.38.244.205! Allowed networks: 127.0.0.1, ::1, 127
 
 Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 207.38.244.205 at 2019-06-20 14:02:17 +0000
 Cannot render console from 207.38.244.205! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/posts/:id/body" for 207.38.244.205 at 2019-06-20 14:04:36 +0000
+Cannot render console from 207.38.244.205! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#body as HTML
+  Parameters: {"id"=>":id"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 15ms (ActiveRecord: 1.5ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=:id):
+  app/controllers/posts_controller.rb:30:in `body'
+
+
